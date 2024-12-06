@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
- .ttum {
- background-color: black; 
- color: #006400;
-}
-
- </style>
+    <style>
+        .ttum {
+            background-color: black; 
+            color: #006400;
+        }
+    </style>
     <title>kupa</title>
 </head>
 <body class="ttum">
     yükleniyor...
-<button onclick="yazdir">DEVAM ETMEK İÇİN TIKLA!</button>
- <script> 
-   let sire = 0
- function yazdir() {
-    document.write("HAD");
-sire++;
-   if (sire < 100) {
-      setTimeout(yazdir, 100);
-   }
-     }
-  </script>
+    <button onclick="yazdir()">DEVAM ETMEK İÇİN TIKLA!</button>
+    <div id="output"></div> <!-- HAD yazıları buraya eklenecek -->
+    <script> 
+        let sire = 0;
+        function yazdir() {
+            document.getElementById("output").innerHTML += "HAD ";  // HAD yazısını ekle
+            sire++;
+            if (sire < 100) {
+                setTimeout(yazdir, 100);  // 100 ms sonra tekrar çalışacak
+            }
+        }
+    </script>
 </body>
 </html>
